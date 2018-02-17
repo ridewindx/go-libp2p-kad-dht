@@ -772,7 +772,7 @@ func testPeerListsMatch(t *testing.T, p1, p2 []peer.ID) {
 }
 
 func TestConnectCollision(t *testing.T) {
-	// t.Skip("skipping test to debug another")
+	t.Skip("we don't handle simultaneous connects")
 	if testing.Short() {
 		t.SkipNow()
 	}
