@@ -16,10 +16,10 @@ import (
 	dssync "github.com/ipfs/go-datastore/sync"
 	u "github.com/ipfs/go-ipfs-util"
 	kb "github.com/libp2p/go-libp2p-kbucket"
-	netutil "github.com/libp2p/go-libp2p-netutil"
 	peer "github.com/libp2p/go-libp2p-peer"
 	pstore "github.com/libp2p/go-libp2p-peerstore"
 	record "github.com/libp2p/go-libp2p-record"
+	swarmt "github.com/libp2p/go-libp2p-swarm/testing"
 	bhost "github.com/libp2p/go-libp2p/p2p/host/basic"
 	ci "github.com/libp2p/go-testutil/ci"
 	travisci "github.com/libp2p/go-testutil/ci/travis"
@@ -39,7 +39,7 @@ func init() {
 }
 
 func setupDHT(ctx context.Context, t *testing.T, client bool) *IpfsDHT {
-	h := bhost.New(netutil.GenSwarmNetwork(t, ctx))
+	h := bhost.New(swarmt.GenSwarm(t, ctx))
 
 	dss := dssync.MutexWrap(ds.NewMapDatastore())
 	var d *IpfsDHT

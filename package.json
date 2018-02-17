@@ -149,12 +149,6 @@
       "version": "0.3.6"
     },
     {
-      "author": "whyrusleeping",
-      "hash": "QmYVR3C8DWPHdHxvLtNFYfjsXgaRAdh6hPMNH3KiwCgu4o",
-      "name": "go-libp2p-netutil",
-      "version": "0.3.9"
-    },
-    {
       "author": "multiformats",
       "hash": "QmWWQ2Txc2c6tqjsBpzg5Ar652cHPGNsQQp2SejkNmkUMb",
       "name": "go-multiaddr",
@@ -171,6 +165,12 @@
       "hash": "QmWFAMPqsEyUX7gDUsRVmMWz59FxSpJ1b2v6bJ1yYzo7jY",
       "name": "go-base58-fast",
       "version": "0.1.1"
+    },
+    {
+      "author": "whyrusleeping",
+      "hash": "QmSwZMWwFZSUpe5muU2xgTUwppH24KfMwdPXiwbEp2c6G5",
+      "name": "go-libp2p-swarm",
+      "version": "2.1.5"
     }
   ],
   "gxVersion": "0.4.0",
