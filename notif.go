@@ -55,7 +55,7 @@ func (nn *netNotifiee) testConnection(v inet.Conn) {
 		// Connection error
 		return
 	}
-	defer s.Close()
+	defer inet.FullClose(s)
 
 	selected, err := mstream.SelectOneOf(dhtProtocols, s)
 	if err != nil {
